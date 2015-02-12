@@ -1,0 +1,27 @@
+<h1>Listing achievments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @achievments.each do |achievment| %>
+      <tr>
+        <td><%= achievment.option %></td>
+        <td><%= link_to 'Show', achievment %></td>
+        <td><%= link_to 'Edit', edit_achievment_path(achievment) %></td>
+        <td><%= link_to 'Destroy', achievment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Achievment', new_achievment_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@achievment) do |f| %>
+  <% if @achievment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@achievment.errors.count, "error") %> prohibited this achievment from being saved:</h2>
+
+      <ul>
+      <% @achievment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :option %><br>
+    <%= f.text_field :option %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

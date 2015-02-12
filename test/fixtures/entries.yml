@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  date: 2015-02-12
+  private: false
+  learning: MyText
+  achievment_id: 
+
+two:
+  description: MyText
+  date: 2015-02-12
+  private: false
+  learning: MyText
+  achievment_id: 

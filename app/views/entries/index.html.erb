@@ -1,0 +1,37 @@
+<h1>Listing entries</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Private</th>
+      <th>Learning</th>
+      <th>Subject</th>
+      <th>Achievment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.description %></td>
+        <td><%= entry.date %></td>
+        <td><%= entry.private %></td>
+        <td><%= entry.learning %></td>
+        <td><%= entry.subject %></td>
+        <td><%= entry.achievment.option %></td>
+        <td><%= link_to 'Show', entry %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entry', new_entry_path, class: "btn btn-primary" %>
